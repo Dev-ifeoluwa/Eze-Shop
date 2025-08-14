@@ -18,7 +18,7 @@ const Navbar = () => {
                 className='h-[36px] relative pl-10 border-[1px] border-gray-300
                 text-sm rounded-[8px] w-full py-2 px-3 focus:outline-none bg-transparent'/>
             </div>
-            <Link href={"/produt-add"}>
+            <Link href={"/"} className='underline'>
                 <button className='bg-orange-400 text-white p-2 font-semibold rounded-md
                 cursor-pointer'>Add Product</button>
             </Link>

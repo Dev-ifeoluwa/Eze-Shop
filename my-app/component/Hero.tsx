@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
+import Link from 'next/link'
 
 const Hero = () => {
   return (
     <div className='min-h-[70vh] md:min-h-[60vh] lg:min-h-[90vh] flex flex-col
-            md:flex-row justify-center gap-10 items-center bg-white px-4 md:px-12 text-black'>
+            md:flex-row justify-center gap-10 items-center bg-white px-4 md:px-10 text-black'>
             <div className='max-w-2xl relative'>
                 <h1 className='text-5xl pt-6 md:pt-0 md:text-7xl leading-tight
                 font-semibold'>Luxury Necklace <span className='text-orange-400'>Collections</span></h1>
@@ -12,12 +13,9 @@ const Hero = () => {
                     necklaces, each piece telling its own 
                     unique story of elegance and sophistication.
                 </p>
-                <button className='mt-8 bg-orange-400 text-white px-3 py-2 rounded-md cursor-pointer'>Show our collection</button>
-                <div className='absolute p-9 w-[30px] h-[30px] bg-orange-400 rounded-[60px]'>
-                        <div className='top-0'></div>
-                        <div className='right-0'></div>
-                        <div className='bottom-0'></div>
-                </div>
+                <button className='mt-8 bg-orange-400 text-white px-3 py-2 rounded-md cursor-pointer'>Explore all collection</button>
+                <Link href={"/"} className="absolute top-0 left-[20px] bg-[linear-gradient(130deg,gray,orange)] text-white animate-bounce text-center px-5 py-2 cursor-pointer">watches collection</Link>
+                <Link href={"/"} className="absolute right-[180px] top-[100px] bg-gray-400 text-white animate-pulse rotate-[20deg] text-center px-5 py-2 cursor-pointer">Jewrellry collection</Link>
             </div>
             <div className='flex gap-4 mt-7'>
                 <Image src="/imghero.png" alt='img' width={450} height={450}/>

@@ -1,99 +1,112 @@
-import React from "react";
-import Image from "next/image";
+// components/Footer.tsx
 import Link from "next/link";
-import { MailCheck } from "lucide-react";
+import Image from "next/image";
+import { Facebook, Twitter, Instagram, Mail, Phone } from "lucide-react";
 
-const Footer = () => {
+export default function Footer() {
   return (
-    <div className="">
-      <div className="relative h-[55vh] w-full ">
-        {/* Background image */}
-        <Image
-          src="/bgf.jpg"
+    <footer className="text-black mx-auto relative h-full w-full md:h-full">
+      <Image
+          src="/bg3.jpg"
           alt="Background"
           fill
           className="object-cover -z-10"
           priority
         />
-        {/* text */}
-        <div className="flex flex-col gap-2 text-center">
-          <div className="flex gap-5 py-7 px-4 justify-center">
-            <Link
-              href={"/"}
-              className="px-3 py-1 font-semibold hover:text-orange-400  hidden"
-            >
-              About Us
+      <div className="mx-auto max-w-7xl-rounded px-6 py-10 flex flex-col gap-10 md:flex md:flex-row justify-between">
+        {/* Brand */}
+        <div>
+          <h2 className="text-2xl font-bold">Eze&apos;s Concept</h2>
+          <p className="mt-2 text-sm text-gray-500 w-full max-w-[500px] text-[16px]">
+          we believe style should be simple, affordable, and timeless.
+           Our store is dedicated to providing high-quality
+            products that blend creativity with everyday comfort. Whether
+           you’re shopping for fashion, lifestyle, or unique essentials, 
+           we are committed to delivering value and excellence with every purchase.
+          </p>
+        </div>
+
+        {/* Links */}
+        <div>
+          <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
+          <ul className="space-y-2 text-gray-500">
+            <li>
+              <Link href="/" className="hover:text-orange-400 transition">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/shop" className="hover:text-orange-400 transition">
+                Shop
+              </Link>
+            </li>
+            <li>
+              <Link href="/about" className="hover:text-orange-400 transition">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:text-orange-400 transition">
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
+        {/* link 2 */}
+        <div className="hidden md:block">
+          <h3 className="text-lg font-semibold mb-3">Store Locations</h3>
+          <ul className="space-y-2 text-gray-500">
+            <li>
+              <Link href="/" className="hover:text-orange-400 transition">
+                Lagos
+              </Link>
+            </li>
+            <li>
+              <Link href="/shop" className="hover:text-orange-400 transition">
+                Ikole Ekiti
+              </Link>
+            </li>
+            <li>
+              <Link href="/about" className="hover:text-orange-400 transition">
+                Oye Ekiti
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:text-orange-400 transition">
+              Ibadan
+              </Link>
+            </li>
+          </ul>
+        </div>
+        {/* Contact / Socials */}
+        <div>
+          <h3 className="text-lg font-semibold mb-3">Get in Touch</h3>
+          <ul className="space-y-2 text-gray-500">
+            <li className="flex items-center gap-2">
+              <Mail size={18} /> support@ezeconcept.com
+            </li>
+            <li className="flex items-center gap-2">
+              <Phone size={18} /> +234 800 000 0000
+            </li>
+          </ul>
+
+          <div className="flex gap-4 mt-4">
+            <Link href="https://facebook.com" target="_blank">
+              <Facebook className="hover:text-orange-400 transition" />
             </Link>
-            <Link
-              href={"/"}
-              className="px-3 py-1 font-semibold hover:text-orange-400 "
-            >
-              Blog
+            <Link href="https://twitter.com" target="_blank">
+              <Twitter className="hover:text-orange-400 transition" />
             </Link>
-            <Link
-              href={"/"}
-              className="px-3 py-1 font-semibold hover:text-orange-400 "
-            >
-              Location
-            </Link>
-            <Link
-              href={"/"}
-              className="px-3 py-1 font-semibold hover:text-orange-400 "
-            >
-              Contact
-            </Link>
-            <Link
-              href={"/"}
-              className="px-3 py-1 font-semibold hover:text-orange-400 "
-            >
-              Order & pay on deliver
+            <Link href="https://instagram.com" target="_blank">
+              <Instagram className="hover:text-orange-400 transition" />
             </Link>
           </div>
-          <hr className="w-full text-gray-400" />
-          {/* bottom start */}
-          <div className="flex justify-between py-8">
-            <div className="flex flex-col gap-1">
-              <h2 className="text-lg font-semibold mb-[30px] md:text-2xl">About Us</h2>
-              <Link href={"/"} className="text-lg">About Us</Link>
-              <Link href={"/"} className="text-lg">Our History</Link>
-              <Link href={"/"} className="text-lg">Our Showrooms</Link>
-              <Link href={"/"} className="text-lg">Contact Us</Link>
-            </div>
-            <div className="flex flex-col gap-1">
-              <h2 className="text-lg font-semibold mb-[30px] md:text-2xl">Contact Us</h2>
-              <Link href={"/"} className="text-lg">+1 800 123456</Link>
-              <Link href={"/"} className="text-lg">Contact Us</Link>
-              <Link href={"/"} className="text-lg">Live Chat</Link>
-              <Link href={"/"} className="text-lg">Email Us</Link>
-            </div>
-            <div className="flex flex-col gap-1">
-              <h2 className="text-lg font-semibold mb-[30px] md:text-2xl">
-                Sign up for email
-              </h2>
-              <p>Join Our Email List & Receive a Special Offer</p>
-              <div className="relative max-w-[300px] md:w-[400px]">
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Your Email"
-                  className="h-[50px] relative pl-10 border-[2px] border-gray-400
-                text-sm rounded-[8px] w-full py-2 px-3 focus:outline-none bg-transparent"
-                />
-                <div
-                  className="absolute right-[20px] top-[16px] flex items-center ps-3
-                pointer-pointer"
-                >
-                  <MailCheck className="w-5 h-5 cursor-pointer" />
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* bottom end */}
         </div>
       </div>
-    </div>
-  );
-};
 
-export default Footer;
+      <div className="border-t border-gray-400 mt-6 py-4 text-center text-sm text-gray-500">
+        © {new Date().getFullYear()} Eze&apos;s concept. All rights reserved <span className="text-black font-semibold whitespace-nowrap">Designed and developed by Ifeoluwa Fowobaje.</span>.
+      </div>
+    </footer>
+  );
+}

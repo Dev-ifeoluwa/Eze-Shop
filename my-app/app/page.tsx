@@ -13,7 +13,7 @@ export default function Home() {
       <div className="bg-gray-100">
         <h1
           className="text-center text-[2rem] font-semibold w-full
-          md:text-4xl pt-15 mt-10"
+          md:text-4xl pt-15"
         >
           <span className="text-orange-400">All</span> for you
         </h1>

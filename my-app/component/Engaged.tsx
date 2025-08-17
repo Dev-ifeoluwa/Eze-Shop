@@ -5,15 +5,15 @@ import Link from "next/link";
 const Engaged = () => {
   return (
     <div className="md:flex flex-col py-10 mx-5 lg:flex flex-row">
-      <div className="relative h-[55vh] w-full border-rounded cursor-pointer">
+      <div className="relative h-[35vh] w-full border-rounded cursor-pointer md:h-[55vh]">
         {/* Background image */}
-        <Image
-          src="/img5.jpg"
-          alt="Background"
-          fill
-          className="object-cover -z-10 p-2 rounded-[20px"
-          priority
-        />
+            <Image
+              src="/img5.jpg"
+              alt="Background"
+              fill
+              className="object-cover -z-10 p-2 rounded-[20px]"
+              priority
+            />
         {/* text */}
         <div className="flex flex-col gap-4 text-center items-left justify-center h-full  md:text-left px-15">
             <p className="text-xl text-gray-400">Need Gift?</p>
@@ -24,7 +24,7 @@ const Engaged = () => {
 
 
 
-      <div className="relative h-[55vh] w-full border-rounded cursor-pointer">
+      <div className="relative h-[35vh] w-full border-rounded cursor-pointer md:h-[55vh]">
         {/* Background image */}
         <Image
           src="/img6.jpg"

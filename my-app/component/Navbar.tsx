@@ -8,7 +8,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="bg-white text-black fixed w-full z-20 top-0 left-0 shadow-md">
+    <nav className="bg-white text-black sticky w-full z-20 top-0 left-0 shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Brand */}
         <h1 className="text-xl font-bold md:text-2xl">

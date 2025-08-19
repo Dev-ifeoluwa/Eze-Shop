@@ -5,7 +5,7 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <div
-      className="min-h-[50vh] md:min-h-[40vh] lg:min-h-[90vh] flex flex-col
+      className="min-h-[50vh] md:min-h-[40vh] lg:min-h-[90vh] flex flex-col mt-24
             md:flex-row justify-center gap-10 items-center bg-white px-4 md:px-10 text-black"
     >
       <div className="max-w-2xl relative">
@@ -25,7 +25,7 @@ const Hero = () => {
         </button>
         <Link
           href={"/"}
-          className="absolute top-[45px] left-[20px] bg-red-400 text-sm text-white animate-bounce text-center px-2 py-1 cursor-pointer"
+          className="absolute top-[45px] left-[20px] bg-red-400 text-sm text-white animate-bounce text-center px-1 py-0 cursor-pointer md:px-5 py-1 md:top-[30px]"
         >
           watches collection
         </Link>
@@ -37,7 +37,7 @@ const Hero = () => {
         </Link>
         <Link
           href={"/"}
-          className="absolute right-[170px] top-[100px] bg-green-400 text-white animate-pulse text-sm text-center px-2 py-1 cursor-pointer md:right-[300px] md:top-[120px]"
+          className="absolute right-[200px] top-[80px] bg-green-400 text-white animate-pulse text-sm text-center px-1 py-0 cursor-pointer md:right-[280px] md:top-[120px] md:px-5 py-1"
         >
           Rings collection
         </Link>

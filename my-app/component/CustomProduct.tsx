@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const CustomProduct = () => {
   return (
-    <div className="relative h-[60vh] w-full border-rounded">
+    <div className="relative h-[40vh] w-full border-rounded">
       {/* Background image */}
       <Image
         src="/img7.jpg"
@@ -14,8 +14,8 @@ const CustomProduct = () => {
         priority
       />
 
-      <div className="flex flex-col items-center gap-3 h-full justify-center md:flex md:flex-row md:justify-between mx-20">
-        <div className="flex flex-col items-center text-center justify-center py-7 md:flex md:flex-row gap-5 md:text-left">
+      <div className="flex flex-col items-center h-full justify-center md:flex md:flex-row md:justify-between mx-20">
+        <div className="flex flex-col items-center text-center justify-center py-7 md:flex md:flex-row gap-0 md:text-left">
           <div>
                 <Image src="/icon1.png" alt="img" width={50} height={50}/>
           </div>

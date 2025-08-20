@@ -4,20 +4,20 @@ import Link from "next/link";
 
 const Engaged = () => {
   return (
-    <div className="md:flex flex-col py-10 mx-5 lg:flex flex-row">
+    <div className="md:flex flex-col py-1 mx-6 lg:flex flex-row">
       <div className="relative h-[35vh] w-full border-rounded cursor-pointer md:h-[55vh]">
         {/* Background image */}
             <Image
               src="/img5.jpg"
               alt="Background"
               fill
-              className="object-cover -z-10 p-2 rounded-[20px]"
+              className="object-cover -z-10 p-2 rounded"
               priority
             />
         {/* text */}
-        <div className="flex flex-col gap-4 text-center items-left justify-center h-full  md:text-left px-15">
-            <p className="text-xl text-gray-400">Need Gift?</p>
-          <h1 className="text-3xl font-semibold md:text-4xl">Gift Guide</h1>
+        <div className="flex flex-col items-center justify-center gap-2 pt-18 mr-50 md:mt-10">
+          <p className="text-md text-gray-400">Need Gift?</p>
+          <h1 className="text-xl font-semibold md:text-4xl">Gift Guide</h1>
         </div>
       </div>
       {/* second image */}
@@ -30,13 +30,13 @@ const Engaged = () => {
           src="/img6.jpg"
           alt="Background"
           fill
-          className="object-cover -z-10 p-2 rounded-[20px]"
+          className="object-cover -z-10 p-2 rounded"
           priority
         />
         {/* text */}
         <div className="flex flex-col gap-4 text-center items-center justify-center h-full  md:text-left px-15">
-            <p className="text-xl text-gray-400">Love Inspires</p>
-          <h1 className="text-3xl font-semibold md:text-4xl">Engagement Rings</h1>
+            <p className="text-md text-gray-400">Love Inspires</p>
+          <h1 className="text-xl font-semibold  mb-10 md:text-4xl">Engagement Rings</h1>
         </div>
       </div>
     </div>

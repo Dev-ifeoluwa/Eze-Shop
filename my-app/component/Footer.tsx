@@ -16,8 +16,8 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl-rounded px-6 py-10 flex flex-col gap-10 md:flex md:flex-row justify-between">
         {/* Brand */}
         <div>
-          <h2 className="text-2xl font-bold">Eze&apos;s Concept</h2>
-          <p className="mt-2 text-sm text-gray-500 w-full max-w-[500px] text-[16px]">
+          <h2 className="text-xl font-bold md:text-2xl">Eze&apos;s Concept</h2>
+          <p className="mt-2 text-sm text-gray-500 max-w-[700px] md:text-[16px] md:max-w-[500px]">
           we believe style should be simple, affordable, and timeless.
            Our store is dedicated to providing high-quality
             products that blend creativity with everyday comfort. Whether
@@ -29,7 +29,7 @@ export default function Footer() {
         {/* Links */}
         <div>
           <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
-          <ul className="space-y-2 text-gray-500">
+          <ul className="space-y-2 text-sm text-gray-500">
             <li>
               <Link href="/" className="hover:text-orange-400 transition">
                 Home
@@ -55,7 +55,7 @@ export default function Footer() {
         {/* link 2 */}
         <div className="hidden md:block">
           <h3 className="text-lg font-semibold mb-3">Store Locations</h3>
-          <ul className="space-y-2 text-gray-500">
+          <ul className="space-y-2 text-sm text-gray-500">
             <li>
               <Link href="/" className="hover:text-orange-400 transition">
                 Lagos
@@ -81,24 +81,24 @@ export default function Footer() {
         {/* Contact / Socials */}
         <div>
           <h3 className="text-lg font-semibold mb-3">Get in Touch</h3>
-          <ul className="space-y-2 text-gray-500">
+          <ul className="space-y-2 text-sm text-gray-500">
             <li className="flex items-center gap-2">
-              <Mail size={18} /> support@ezeconcept.com
+              <Mail size={15} /> support@ezeconcept.com
             </li>
             <li className="flex items-center gap-2">
-              <Phone size={18} /> +234 800 000 0000
+              <Phone size={15} /> +234 800 000 0000
             </li>
           </ul>
 
           <div className="flex gap-4 mt-4">
             <Link href="https://facebook.com" target="_blank">
-              <Facebook className="hover:text-orange-400 transition" />
+              <Facebook className="hover:text-orange-400 transition" width={25}/>
             </Link>
             <Link href="https://twitter.com" target="_blank">
-              <Twitter className="hover:text-orange-400 transition" />
+              <Twitter className="hover:text-orange-400 transition" width={25}/>
             </Link>
             <Link href="https://instagram.com" target="_blank">
-              <Instagram className="hover:text-orange-400 transition" />
+              <Instagram className="hover:text-orange-400 transition" width={25}/>
             </Link>
           </div>
         </div>
@@ -110,3 +110,8 @@ export default function Footer() {
     </footer>
   );
 }
+
+
+
+
+

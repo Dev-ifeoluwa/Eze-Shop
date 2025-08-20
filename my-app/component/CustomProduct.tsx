@@ -10,25 +10,25 @@ const CustomProduct = () => {
         src="/img7.jpg"
         alt="Background"
         fill
-        className="object-cover -z-10 p-10 rounded-[50px]"
+        className="object-cover -z-10 p-3 rounded"
         priority
       />
 
-      <div className="flex flex-col items-center h-full justify-center md:flex md:flex-row md:justify-between mx-20">
-        <div className="flex flex-col items-center text-center justify-center py-7 md:flex md:flex-row md:gap-2 md:text-left">
+      <div className="flex flex-col items-center gap-3 h-full justify-center md:flex md:flex-row md:justify-between mx-20">
+        <div className="flex flex-col items-center text-center justify-center py-7 md:flex md:flex-row gap-5 md:text-left">
           <div>
                 <Image src="/icon1.png" alt="img" width={50} height={50}/>
           </div>
           <div>
             <p>All is your's</p>
-            <h1 className="text-gray-400 text-2xl md:text-5xl font-bold">
+            <h1 className="text-gray-700 text-2xl md:text-5xl font-bold">
               Custom Diamond Jewelry
             </h1>
           </div>
         </div>
         <div className="mb-5">
-          <Link href={"/"} className="text-lg text-white bg-orange-500 px-3 py-2 hover:rounded-full md:px-8 py-4 font-semibold">
-            Collection
+          <Link href={"/"} className="text-[15px] md:text-[19px] text-black bg-white px-3 py-2 hover:rounded-full md:px-8 py-4">
+            Get Started
           </Link>
         </div>
       </div>

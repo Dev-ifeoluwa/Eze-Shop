@@ -13,7 +13,7 @@ export default function Home() {
       <div>
         <h1
           className="text-center text-[23px] font-semibold w-full
-          md:text-4xl pt-13"
+          md:text-4xl pt-17"
         >
           <span className="text-orange-400">All</span> for you
         </h1>
@@ -31,7 +31,7 @@ export default function Home() {
       <div className="mt-20">
         <Collections />
       </div>
-      <div className="mt-10">
+      <div className="mt-3">
         <CustomProduct />
       </div>
       <div>

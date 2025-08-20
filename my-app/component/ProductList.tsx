@@ -22,8 +22,8 @@ const productList = () => {
             />
             <div className="mt-4">
               <div className="text-center bg-orange-400">
-                <h2 className="font-semibold text-lg text-white py-2">Diamond Rings</h2>
-                <p className="font-medium text-[17px] absolute top-0 px-6 py-3
+                <h2 className="font-semibold text-[17px] text-white py-2">Diamond Rings</h2>
+                <p className="font-medium text-[17px] absolute top-0 px-2 py-1
                 bg-gray-400 rounded text-white font-semibold">$300</p>
               </div>
             </div>

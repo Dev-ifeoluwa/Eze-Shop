@@ -10,10 +10,10 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <div className="bg-gray-100">
+      <div>
         <h1
-          className="text-center text-[2rem] font-semibold w-full
-          md:text-4xl pt-15"
+          className="text-center text-[23px] font-semibold w-full
+          md:text-4xl pt-13"
         >
           <span className="text-orange-400">All</span> for you
         </h1>
@@ -21,7 +21,7 @@ export default function Home() {
       </div>
       <div>
         <h1
-          className="text-center text-[2rem] font-semibold w-full
+          className="text-center text-[23px] font-semibold w-full
           md:text-4xl pt-15 mt-10"
         >
           Our <span className="text-orange-400">Products</span>

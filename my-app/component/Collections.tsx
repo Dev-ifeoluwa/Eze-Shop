@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Collections = () => {
   return (
-    <div className="relative h-[80vh] w-full">
+    <div className="relative h-[65vh] w-full md:h-[80vh]">
       {/* Background image */}
       <Image
         src="/bg2.jpg"

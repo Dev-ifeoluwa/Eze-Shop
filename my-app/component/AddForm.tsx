@@ -1,9 +1,14 @@
 import React from "react";
 
 const AddForm = () => {
+    // server Action
+    async function create() {
+        'use server'
+        // Mutate data
+    }
   return (
     <form
-      action=""
+      action={create}
       className="w-full max-w-xl mx-auto flex flex-col justify-center items-center
     space-y-4 mt-3 md:mt-5"
     >
@@ -53,10 +58,11 @@ const AddForm = () => {
           name="description"
           id=""
           rows={4}
+          value="Description what you sell"
           className="w-full
             px-3 py-1.5 md:py-2 text-gray-500 rounded-xl bg-white border border-gray-500"
         >
-          Description what you sell
+          
         </textarea>
       </div>
       <button

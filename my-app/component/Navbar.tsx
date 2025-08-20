@@ -11,9 +11,9 @@ export default function Navbar() {
     <nav className="bg-white text-black sticky w-full z-20 top-0 left-0 shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Brand */}
-        <h1 className="text-xl font-bold md:text-2xl">
+        <h1 className="text-2xl md:text-3xl">
           {" "}
-          Eze&apos;s <span className="text-orange-400">Concept</span>
+          Eze&apos;s <span className="text-orange-500">Concept</span>
         </h1>
 
         {/* Desktop Links */}
@@ -91,7 +91,7 @@ export default function Navbar() {
           onClick={() => setOpen(true)}
           aria-label="Open Menu"
         >
-          <Menu size={20} />
+          <Menu size={25} />
         </button>
       </div>
 
@@ -104,7 +104,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center p-4 border-b border-orange-400">
           <h2 className="text-lg font-bold">Menu</h2>
           <button onClick={() => setOpen(false)} aria-label="Close Menu">
-            <X size={20} />
+            <X size={25} />
           </button>
         </div>
 
@@ -155,10 +155,11 @@ export default function Navbar() {
             </Link>
           </li>
         </ul>
-        <div className="relative max-w-[220px] mx-auto">
+      </div>
+      <div className="relative w-full max-w-[450px] mx-auto md:hidden">
           <div
             className="absolute inset-y-0 start-0 flex items-center ps-3
-                pointer-events-none"
+                pointer-events-none mb-3"
           >
             {/* for search */}
             <Search className="w-4 h-4" />
@@ -166,16 +167,14 @@ export default function Navbar() {
           <input
             type="text"
             placeholder="Search Products"
-            className="h-[36px] relative pl-10 border-[1px] border-orange-300
-                text-sm rounded-[8px] w-full py-2 px-3 focus:outline-none bg-transparent"
+            className="h-[36px] relative pl-10 border-[1px] mb-3
+                text-sm rounded-[20px] w-full py-2 px-3 focus:outline-none bg-transparent"
           />
         </div>
-      </div>
-
       {/* Overlay */}
       {open && (
         <div
-          className="fixed inset-0 bg-black/40 z-20"
+          className="fixed inset-0 bg-black/40 z-20 "
           onClick={() => setOpen(false)}
         />
       )}

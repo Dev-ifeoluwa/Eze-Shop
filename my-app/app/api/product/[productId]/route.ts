@@ -1,12 +1,9 @@
 import { connectDB } from "../../db/connectDB";
 import ProductModel from "../../models/product.model";
 
-export async function GET(
-  request: Request,
-  context: { params: { productId: string } }
-) {
+export async function GET(request: Request, { params }: { params: any }) {
   await connectDB();
-  const productId = context.params.productId;
+  const productId = params.productId;
 
   try {
     const product = await ProductModel.findById(productId);

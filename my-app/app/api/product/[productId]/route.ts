@@ -1,21 +1,21 @@
 import { connectDB } from "../../db/connectDB";
-import product from "../../models/product.model";
+import ProductModel from "../../models/product.model";
 
 export async function GET(
-    request: Request, {params}: {params: Promise<{productId: string}> }
-
+  request: Request,
+  { params }: { params: { productId: string } }
 ) {
-    await connectDB();
-    const productId = (await params).productId;
+  await connectDB();
+  const productId = params.productId;
 
-
-    try {
-        const Product = await product.findById(productId);
-        if (!product) {
-            return Response.json({message: "product not found."}, {status: 400});
-        }
-        return Response.json({product}, {status: 200})
-    } catch (error: any) {
-        return Response.json({message: error.message}, {status: 400})
+  try {
+    const product = await ProductModel.findById(productId);
+    if (!product) {
+      return Response.json({ message: "Product not found." }, { status: 404 });
     }
+
+    return Response.json({ product }, { status: 200 });
+  } catch (error: any) {
+    return Response.json({ message: error.message }, { status: 400 });
+  }
 }

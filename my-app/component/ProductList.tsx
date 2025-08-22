@@ -25,7 +25,7 @@ const productList = () => {
   return (
     <div
       id="product"
-      className="px-4 md:px-12 py-5 md:py-10 flex justify-center"
+      className="flex flex-col items-center px-4 md:px-12 py-5 md:py-10 flex justify-center"
     >
       <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 relative">
         {products.map((product: product, index) => (
@@ -47,6 +47,11 @@ const productList = () => {
           </Link>
         ))}
       </div>
+      <Link 
+          href="/store"
+          className="px-4 mt-6 rounded-lg py-2 bg-orange-400 text-center text-white font-semibold items-center justify-center max-w-[200px]"
+          >View Store
+      </Link>
     </div>
   );
 };

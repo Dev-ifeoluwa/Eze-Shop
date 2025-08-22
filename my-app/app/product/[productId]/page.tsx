@@ -43,7 +43,7 @@ const ProductPage = () => {
 
   return (
     <div className="px-4 md:px-12 bg-[#F8F9FA]">
-      <p className="cursor-pointer py-3" onClick={() => router.back()}>
+      <p className="cursor-pointer py-3 ml-2" onClick={() => router.back()}>
         &larr; Back
       </p>
 
@@ -87,7 +87,7 @@ const ProductPage = () => {
           <h3 className="text-3xl font-semibold mt-3">${product.price}</h3>
 
           <Link href={product.link} target="_blank">
-            <button className="mt-8 bg-[#212529] hover:bg-[#343A40] text-white px-3 py-2 w-full font-semibold">
+            <button className="mt-8 bg-gray-500 hover:bg-orange-500 text-white px-3 py-2 w-full font-semibold">
               Contact Seller
             </button>
           </Link>

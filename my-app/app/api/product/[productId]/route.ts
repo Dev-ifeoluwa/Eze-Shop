@@ -3,10 +3,10 @@ import ProductModel from "../../models/product.model";
 
 export async function GET(
   request: Request,
-  { params }: { params: { productId: string } }
+  context: { params: { productId: string } }
 ) {
   await connectDB();
-  const productId = params.productId;
+  const productId = context.params.productId;
 
   try {
     const product = await ProductModel.findById(productId);

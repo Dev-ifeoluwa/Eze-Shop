@@ -1,26 +1,42 @@
 "use client";
 
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import Link from "next/link";
 import { Menu, X, Search } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+
+  const router = useRouter();
+
+  const handleChange = async (e: ChangeEvent<HTMLInputElement>) => {
+    const urlParams = new URLSearchParams(window.location.search);
+    urlParams.set("searchProduct", e.target.value);
+
+
+    const searchQuery = urlParams.toString();
+
+    router.push(`/search?${searchQuery}`);
+  }
 
   return (
     <nav className="bg-white text-black sticky w-full z-20 top-0 left-0 shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Brand */}
-        <h1 className="text-2xl md:text-3xl">
+        <Link 
+        href="/"
+        className="text-2xl md:text-3xl"
+        >
           {" "}
           Eze&apos;s <span className="text-orange-500">Concept</span>
-        </h1>
+        </Link>
 
         {/* Desktop Links */}
         <ul className="hidden md:flex gap-6 font-medium">
           <li>
             <Link
-              href="/"
+              href="/rings"
               className="hover:text-orange-500 transition-colors duration-300"
             >
               Rings
@@ -28,7 +44,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="/shop"
+              href="/watches"
               className="hover:text-orange-500 transition-colors duration-300"
             >
               Watches
@@ -36,7 +52,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="/about"
+              href="/necklace"
               className="hover:text-orange-500 transition-colors duration-300"
             >
               Necklace
@@ -44,7 +60,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="/contact"
+              href="/bracelets"
               className="hover:text-orange-500 transition-colors duration-300"
             >
               Bracelets
@@ -52,7 +68,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="/contact"
+              href="/jewrelly"
               className="hover:text-orange-500 transition-colors duration-300"
             >
               Jewrelly
@@ -71,6 +87,7 @@ export default function Navbar() {
           <input
             type="text"
             placeholder="Search Products"
+            onChange={handleChange}
             className="h-[36px] relative pl-10 border-[1px] border-gray-300
                 text-sm rounded-[8px] w-full py-2 px-3 focus:outline-none bg-transparent"
           />
@@ -111,7 +128,7 @@ export default function Navbar() {
         <ul className="flex flex-col gap-4 p-6 font-medium">
           <li>
             <Link
-              href="/"
+              href="/rings"
               onClick={() => setOpen(false)}
               className="hover:text-orange-400 duration-400"
             >
@@ -120,7 +137,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="/shop"
+              href="/watches"
               onClick={() => setOpen(false)}
               className="hover:text-orange-400 duration-400"
             >
@@ -129,7 +146,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="/about"
+              href="/necklace"
               onClick={() => setOpen(false)}
               className="hover:text-orange-400 duration-400"
             >
@@ -138,7 +155,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="/contact"
+              href="/bracelets"
               onClick={() => setOpen(false)}
               className="hover:text-orange-400 duration-400"
             >
@@ -147,7 +164,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="/contact"
+              href="/jewrelly"
               onClick={() => setOpen(false)}
               className="hover:text-orange-400 duration-400"
             >
@@ -167,6 +184,7 @@ export default function Navbar() {
           <input
             type="text"
             placeholder="Search Products"
+            onChange={handleChange}
             className="h-[36px] relative pl-10 border-[1px] mb-3
                 text-sm rounded-[20px] w-full py-2 px-3 focus:outline-none bg-transparent"
           />

@@ -84,7 +84,7 @@ const ProductPage = () => {
             </div>
           </div>
 
-          <h3 className="text-3xl font-semibold mt-3">${product.price}</h3>
+          <h3 className="text-3xl font-semibold mt-3">₦{product.price}</h3>
 
           <Link href={product.link} target="_blank">
             <button className="mt-8 bg-gray-500 hover:bg-orange-500 text-white px-3 py-2 w-full font-semibold">

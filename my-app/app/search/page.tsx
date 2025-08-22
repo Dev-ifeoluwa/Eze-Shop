@@ -4,7 +4,7 @@ import axios from 'axios';
 import Link from "next/link";
 import { useSearchParams } from 'next/navigation'
 import Image from "next/image";
-import React, { useEffect, useState } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 
 
 
@@ -16,8 +16,7 @@ interface product{
 }
 
 
-const searchProduct = () => {
-
+const SearchComponent = () => {
   const [products, setProducts] = useState([]);
 
   const searchParams = useSearchParams();
@@ -59,6 +58,15 @@ const searchProduct = () => {
       </div>
     </div>
   )
+
+}
+
+
+const searchProduct = () => {
+  return <Suspense fallback={"/hi"}>
+    <SearchComponent />
+  </Suspense>
+  
 }
 
 export default searchProduct

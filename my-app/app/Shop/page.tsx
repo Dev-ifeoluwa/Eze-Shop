@@ -15,11 +15,11 @@ interface product{
 }
 
 
-const productList = () => {
+const ShopList = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get("/api/fetch-products?limit=4").then((response) => setProducts(response.data.products))
+    axios.get("/api/fetch-products").then((response) => setProducts(response.data.products))
   }, [])
 
   return (
@@ -48,19 +48,12 @@ const productList = () => {
         ))}
       </div>
       <Link 
-          href="/Shop"
+          href="/store"
           className="px-4 mt-6 rounded-lg py-2 bg-orange-400 text-center text-white font-semibold items-center justify-center max-w-[200px]"
-          >View Store
+          >View more
       </Link>
     </div>
   );
 };
 
-export default productList;
-
-
-
-
-
-
-
+export default ShopList;

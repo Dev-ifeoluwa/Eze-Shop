@@ -1,6 +1,7 @@
 import AddForm from "@/component/AddForm";
 import React from "react";
 
+
 const AddProductPage = () => {
   return (
     <div className="px-4 md:px-12 bg-gray-200 pb-8">

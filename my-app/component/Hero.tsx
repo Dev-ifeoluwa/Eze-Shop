@@ -5,12 +5,12 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <div
-      className="min-h-[50vh] md:min-h-[40vh] lg:min-h-[90vh] flex flex-col mt-24
+      className="min-h-[30vh] md:min-h-[40vh] lg:min-h-[90vh] flex flex-col mt-24
             md:flex-row justify-center gap-10 items-center bg-white px-4 md:px-10 text-black"
     >
       <div className="max-w-2xl relative">
         <h1
-          className="text-4xl mt-6 pt-6 md:pt-0 md:text-5xl leading-tight
+          className="text-4xl mt-6 pt-2 md:pt-0 md:text-5xl leading-tight
                 font-semibold lg:text-7xl"
         >
           Luxury Necklace <span className="text-orange-400">Collections</span>

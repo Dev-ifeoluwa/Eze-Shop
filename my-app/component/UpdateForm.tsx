@@ -1,17 +1,45 @@
 "use client";
 
-import { addAction } from "@/utils/addAction";
+import { updateAction } from '@/utils/updateAction'
+import axios from "axios";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 // import React, { use } from "react";
 import toast from "react-hot-toast";
 
-const AddForm = () => {
+
+interface Product {
+  image: string;
+  _id: string;
+  name: string;
+  price: number;
+  link: string;
+  description: string;
+}
+
+
+const UpdateForm = ({productId}: {productId: string}) => {
   const router = useRouter();
   const [imageURL, setImageURL] = useState("");
+  const [product, setProduct] = useState<Product>();
+
+
+  useEffect(() => {
+    axios
+    .get(`/api/product/${productId}`)
+    .then((response) => setProduct(response.data.product))
+  }, []);
+
+  useEffect(() => {
+    if(product) {
+      setImageURL(product.image)
+    }
+  }, [product])
+
+
   async function clientAddAction(formData: FormData) {
-    const { error, success } = await addAction(formData);
+    const { error, success } = await updateAction(formData, productId);
 
     if (error) {
       // toast notification
@@ -40,7 +68,6 @@ const AddForm = () => {
     }
   };
   return (
-    <>
     <form
       action={clientAddAction}
       className="w-full max-w-xl mx-auto flex flex-col justify-center items-center
@@ -72,6 +99,7 @@ const AddForm = () => {
         <input
           type="text"
           name="name"
+          defaultValue={product?.name}
           placeholder="Enter Your Product Name"
           className="w-full
             px-3 py-1.5 md:py-2 text-gray-500 rounded-xl bg-white border border-gray-500"
@@ -82,6 +110,7 @@ const AddForm = () => {
         <input
           type="number"
           name="price"
+          defaultValue={product?.price}
           placeholder="Enter Your Product Price"
           className="w-full
             px-3 py-1.5 md:py-2 text-gray-500 rounded-xl bg-white border border-gray-500"
@@ -92,6 +121,7 @@ const AddForm = () => {
         <input
           type="text"
           name="link"
+          defaultValue={product?.link}
           placeholder="Link to where buyers can find you"
           className="w-full
             px-3 py-1.5 md:py-2 text-gray-500 rounded-xl bg-white border border-gray-500"
@@ -103,6 +133,7 @@ const AddForm = () => {
           name="description"
           id=""
           rows={4}
+          defaultValue={product?.description}
           placeholder="Description what you sell"
           className="w-full
             px-3 py-1.5 md:py-2 text-gray-500 rounded-xl bg-white border border-gray-500"
@@ -113,12 +144,10 @@ const AddForm = () => {
         className="w-full bg-orange-500 text-white px-3 py-2 mt-2 rounded-md cursor-pointer font-semibold
       hover:shadow-xl transition-shadow duration-300"
       >
-        Add Your Product
+        Update Your Product
       </button>
-      {/* for add updating product and deleting */}
     </form>
-    </>
   );
 };
 
-export default AddForm;
+export default UpdateForm;

@@ -2,8 +2,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Facebook, Twitter, Instagram, Mail, Phone } from "lucide-react";
+import AddRemoveProduct from "./AddRemoveProduct";
 
 export default function Footer() {
+
   return (
     <footer className="text-black mx-auto relative h-full w-full md:h-full">
       <Image
@@ -46,11 +48,12 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/add-product" className="hover:text-orange-400 transition">
-                Add Product
+              <Link href="/add-product" className="hover:text-orange-400 transition">  
+                Add product
               </Link>
             </li>
           </ul>
+          {/* /add-product route for add product */}
         </div>
         {/* link 2 */}
         <div className="hidden md:block">

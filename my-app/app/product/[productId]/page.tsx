@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
-// import toast from "react-hot-toast";
+import toast from "react-hot-toast";
 
 interface Product {
   image: string;
@@ -17,18 +17,19 @@ interface Product {
   description: string;
 }
 
-const ProductPage = () => {
+const ProductPage = () => {  
+
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const params = useParams();
   const [product, setProduct] = useState<Product>();
 
-  // const handleDelete = async () => {
-  //   const response = await axios.delete(`/api/product/${params.productId}`);
+  const handleDelete = async () => {
+    const response = await axios.delete(`/api/product/${params.productId}`);
 
-  //   toast.success(response.data.message);
-  //   router.push("/");
-  // };
+    toast.success(response.data.message);
+    router.push("/");
+  };
 
   useEffect(() => {
     axios
@@ -37,9 +38,17 @@ const ProductPage = () => {
   }, []);
 
   if (!product) {
-    return <p className='h-screen text-center
-    justify-center items-center font-6xl'>Loading...</p>;
+    return (
+      <div className="h-screen flex justify-center items-center bg-white">
+        <div className="flex space-x-2">
+          <div className="w-4 h-4 bg-blue-500 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+          <div className="w-4 h-4 bg-blue-500 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+          <div className="w-4 h-4 bg-blue-500 rounded-full animate-bounce"></div>
+        </div>
+      </div>
+    );
   }
+  
 
   return (
     <div className="px-4 md:px-12 bg-[#F8F9FA]">
@@ -75,7 +84,7 @@ const ProductPage = () => {
                   </Link>
                   <p
                     className="text-red-500 cursor-pointer"
-                    // onClick={handleDelete}
+                    onClick={handleDelete}
                   >
                     Delete
                   </p>

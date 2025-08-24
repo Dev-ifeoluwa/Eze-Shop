@@ -26,7 +26,8 @@ export default function Home() {
         >
           Our <span className="text-orange-400">Products</span>
         </h1>
-        <ProductList />
+      {/* Show only 4 products on homepage */}
+      <ProductList />
       </div>
       <div className="mt-20">
         <Collections />

@@ -2,7 +2,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Facebook, Twitter, Instagram, Mail, Phone } from "lucide-react";
-import AddRemoveProduct from "./AddRemoveProduct";
 
 export default function Footer() {
 

@@ -26,14 +26,14 @@ export default function Navbar() {
         {/* Brand */}
         <Link 
         href="/"
-        className="text-2xl md:text-3xl"
+        className="text-xl md:text-2xl"
         >
           {" "}
           Eze&apos;s <span className="text-orange-500">Concept</span>
         </Link>
 
         {/* Desktop Links */}
-        <ul className="hidden md:flex gap-6 font-medium">
+        <ul className="hidden md:flex gap-6 font-medium md:hidden lg:flex">
           <li>
             <Link
               href="/rings"
@@ -93,18 +93,18 @@ export default function Navbar() {
           />
         </div>
 
-        <Link href={"/account"}>
+        <Link href={"/Shop"}>
           <button
             className="hidden bg-orange-400 text-white p-2 font-semibold rounded-md
-                 cursor-pointer hover:shadow-xl transition-shadow duration-300 md:block"
+                 cursor-pointer hover:shadow-xl transition-shadow duration-300 md:hidden lg:block"
           >
-            My Account
+            Shop Now
           </button>
         </Link>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden"
+          className="block md:block lg:hidden focus:outline-none"
           onClick={() => setOpen(true)}
           aria-label="Open Menu"
         >
@@ -173,11 +173,10 @@ export default function Navbar() {
           </li>
         </ul>
       </div>
-      <div className="relative w-full max-w-[450px] mx-auto md:hidden">
+      <div className="relative w-full max-w-[300px] mx-auto md:hidden">
           <div
             className="absolute inset-y-0 start-0 flex items-center ps-3
-                pointer-events-none mb-3"
-          >
+                pointer-events-none mb-3">
             {/* for search */}
             <Search className="w-4 h-4" />
           </div>

@@ -11,11 +11,11 @@ const Engaged = () => {
               src="/img5.jpg"
               alt="Background"
               fill
-              className="object-cover -z-10 p-2 rounded"
+              className="object-cover -z-10 rounded"
               priority
             />
         {/* text */}
-        <div className="flex flex-col items-center justify-center gap-2 pt-10 mr-50 md:mt-10">
+        <div className="flex flex-col items-center justify-center gap-2 pt-10 mr-45 md:mt-10">
           <p className="text-md text-gray-400">Need Gift?</p>
           <h1 className="text-xl font-semibold md:text-4xl">Gift Guide</h1>
         </div>
@@ -30,7 +30,7 @@ const Engaged = () => {
           src="/img6.jpg"
           alt="Background"
           fill
-          className="object-cover -z-10 p-2 rounded"
+          className="object-cover -z-10 rounded"
           priority
         />
         {/* text */}

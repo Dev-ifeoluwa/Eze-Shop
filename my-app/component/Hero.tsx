@@ -10,12 +10,12 @@ const Hero = () => {
     >
       <div className="max-w-2xl relative">
         <h1
-          className="text-4xl mt-6 pt-2 md:pt-0 md:text-5xl leading-tight
+          className="text-4xl md:md:text-5xl leading-tight
                 font-semibold lg:text-7xl"
         >
           Luxury Necklace <span className="text-orange-400">Collections</span>
         </h1>
-        <p className="text-gray-400 mt-4 text-lg md:text-xl">
+        <p className="text-gray-400 mt-3 text-lg md:text-xl">
           Discover our exquisite range of handcrafted necklaces, each piece
           telling its own unique story of elegance and sophistication.
         </p>
@@ -25,19 +25,19 @@ const Hero = () => {
         </button>
         <Link
           href={"/"}
-          className="absolute top-[45px] left-[20px] bg-red-400 text-sm text-white animate-bounce text-center px-1 py-0 cursor-pointer md:px-5 py-1 md:top-[30px]"
+          className="hidden absolute top-[45px] left-[20px] bg-red-400 text-sm text-white animate-bounce text-center px-1 py-0 cursor-pointer md:px-5 py-1 md:top-[30px]"
         >
           watches collection
         </Link>
         <Link
           href={"/"}
-          className="absolute bottom-0 left-[200px] bg-black text-white animate-pulse text-center px-5 py-2  rounded cursor-pointer"
+          className="hidden absolute bottom-0 left-[200px] bg-black text-white animate-pulse text-center px-5 py-2  rounded cursor-pointer"
         >
           Contact to buy Now
         </Link>
         <Link
           href={"/"}
-          className="absolute right-[200px] top-[80px] bg-green-400 text-white animate-pulse text-sm text-center px-1 py-0 cursor-pointer md:right-[280px] md:top-[120px] md:px-5 py-1"
+          className="hidden absolute right-[200px] top-[80px] bg-green-400 text-white animate-pulse text-sm text-center px-1 py-0 cursor-pointer md:right-[280px] md:top-[120px] md:px-5 py-1"
         >
           Rings collection
         </Link>

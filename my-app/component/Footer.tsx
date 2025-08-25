@@ -37,7 +37,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/shop" className="hover:text-orange-400 transition">
+              <Link href="Shop" className="hover:text-orange-400 transition">
                 Shop
               </Link>
             </li>
@@ -55,7 +55,7 @@ export default function Footer() {
           {/* /add-product route for add product */}
         </div>
         {/* link 2 */}
-        <div className="hidden md:block">
+        <div className="md:block">
           <h3 className="text-lg font-semibold mb-3">Store Locations</h3>
           <ul className="space-y-2 text-sm text-gray-500">
             <li>

@@ -19,7 +19,7 @@ const productList = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get("/api/fetch-products?limit=4").then((response) => setProducts(response.data.products))
+    axios.get("/api/fetch-products?limit=8").then((response) => setProducts(response.data.products))
   }, [])
 
   return (

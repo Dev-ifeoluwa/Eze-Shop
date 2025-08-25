@@ -1,6 +1,7 @@
 "use client";
 
-import ProductList from '@/component/ProductList'
+
+
 import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
@@ -41,9 +42,9 @@ const ProductPage = () => {
     return (
       <div className="h-screen flex justify-center items-center bg-white">
         <div className="flex space-x-2">
-          <div className="w-4 h-4 bg-blue-500 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
-          <div className="w-4 h-4 bg-blue-500 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
-          <div className="w-4 h-4 bg-blue-500 rounded-full animate-bounce"></div>
+          <div className="w-4 h-4 bg-orange-500 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+          <div className="w-4 h-4 bg-orange-500 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+          <div className="w-4 h-4 bg-orange-500 rounded-full animate-bounce"></div>
         </div>
       </div>
     );
@@ -56,14 +57,14 @@ const ProductPage = () => {
         &larr; Back
       </p>
 
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center md:space-x-10">
-        <Image
+      <div className="max-w-7xl p-5 bg-gray-200 rounded mb-4 mx-auto flex flex-col md:flex-row justify-between items-center md:space-x-10">
+          <Image
           src={product.image}
           alt="img"
           width={1000}
           height={1000}
           className="max-w-full md:max-w-xl md:min-w-[30rem] min-h-[28rem] max-h-[28rem] object-cover object-center basis-1/2"
-        />
+          />
 
         <div className="basis-1/2 py-8">
           <div className="flex justify-between items-center">
@@ -93,23 +94,21 @@ const ProductPage = () => {
             </div>
           </div>
 
-          <h3 className="text-3xl font-semibold mt-3">₦{product.price}</h3>
+          <h3 className="text-3xl font-semibold mt-3"><span>₦</span> {product.price}</h3>
 
           <Link href={product.link} target="_blank">
             <button className="mt-8 bg-gray-500 hover:bg-orange-500 text-white px-3 py-2 w-full font-semibold">
               Contact Seller
             </button>
           </Link>
-
-          <p className="font-semibold mt-10 text-lg">Description</p>
-          <p className="mt-1">{product.description}</p>
+          <p className="mt-2 pt-1">Contact us to buy we reply ASAP, delivery at ease.</p>
+          <a href="/" ><p className="mt-2 pt-1 text-orange-500">Call 09032094667 To Place Your Order</p></a>
         </div>
       </div>
-
-      <h2 className="w-full text-2xl font-semibold pt-20">
-        You might also like
-      </h2>
-      <ProductList />
+      <div>
+        <p className="font-semibold mt-10 text-lg">Description</p>
+          <p className="mt-2 mb-5">{product.description}</p>
+      </div>
     </div>
   );
 };

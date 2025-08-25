@@ -27,7 +27,7 @@ const CustomProduct = () => {
           </div>
         </div>
         <div className="mb-5">
-          <Link href={"/"} className="text-[15px] md:text-[19px] text-black bg-white px-3 py-2 hover:rounded-full md:px-8 py-4">
+          <Link href={"/"} className="text-[15px] mb-4 md:text-[19px] text-black bg-white px-3 py-2 hover:rounded-full md:px-8 py-4">
             Get Started
           </Link>
         </div>

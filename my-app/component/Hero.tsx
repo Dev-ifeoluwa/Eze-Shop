@@ -19,25 +19,25 @@ const Hero = () => {
           Discover our exquisite range of handcrafted necklaces, each piece
           telling its own unique story of elegance and sophistication.
         </p>
-        <button className="mt-8 bg-orange-400 text-white px-3 py-2 rounded-md cursor-pointer
+        <Link  href={"/Shop"} className="mt-5 inline-block bg-orange-400 text-white
         hover:animate-bounce hover:bg-gray-400 px-4 py-2 rounded">
           Explore all collection
-        </button>
+        </Link>
         <Link
           href={"/"}
-          className="hidden absolute top-[45px] left-[20px] bg-red-400 text-sm text-white animate-bounce text-center px-1 py-0 cursor-pointer md:px-5 py-1 md:top-[30px]"
+          className="absolute top-[-10px] left-[20px] bg-red-400 text-sm text-white animate-pulse text-center px-1 py-0 cursor-pointer md:px-5 py-1 md:top-[30px]"
         >
           watches collection
         </Link>
         <Link
-          href={"/"}
-          className="hidden absolute bottom-0 left-[200px] bg-black text-white animate-pulse text-center px-5 py-2  rounded cursor-pointer"
+          href={"/https://wa.me/message/GMOSQ7JX7A75N1"}
+          className="absolute bottom-0 left-[200px] bg-black text-white animate-bounce text-center px-5 py-2  rounded cursor-pointer"
         >
-          Contact to buy Now
+          Buy Now
         </Link>
         <Link
           href={"/"}
-          className="hidden absolute right-[200px] top-[80px] bg-green-400 text-white animate-pulse text-sm text-center px-1 py-0 cursor-pointer md:right-[280px] md:top-[120px] md:px-5 py-1"
+          className="absolute right-[200px] top-[80px] bg-green-400 text-white animate-pulse text-sm text-center px-1 py-0 cursor-pointer md:right-[280px] md:top-[120px] md:px-5 py-1"
         >
           Rings collection
         </Link>

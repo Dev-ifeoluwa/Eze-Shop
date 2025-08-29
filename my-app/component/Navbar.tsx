@@ -10,33 +10,31 @@ export default function Navbar() {
 
   const router = useRouter();
 
+  //------------------- this is for the search functionality--------------
   const handleChange = async (e: ChangeEvent<HTMLInputElement>) => {
     const urlParams = new URLSearchParams(window.location.search);
     urlParams.set("searchProduct", e.target.value);
 
-
     const searchQuery = urlParams.toString();
 
     router.push(`/search?${searchQuery}`);
-  }
+  };
+  // ----------------this search functionality ends here--------------------
 
   return (
     <nav className="bg-white text-black sticky w-full z-20 top-0 left-0 shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Brand */}
-        <Link 
-        href="/"
-        className="text-xl md:text-2xl"
-        >
+        {/*--------------- Brand------------- */}
+        <Link href="/" className="text-xl md:text-2xl">
           {" "}
           Eze&apos;s <span className="text-orange-500">Concept</span>
         </Link>
 
-        {/* Desktop Links */}
+        {/* -----------Desktop Links-------------- */}
         <ul className="hidden md:flex gap-6 font-medium md:hidden lg:flex">
           <li>
             <Link
-              href="/rings"
+              href="/category/rings"
               className="hover:text-orange-500 transition-colors duration-300"
             >
               Rings
@@ -44,7 +42,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="/watches"
+              href="/category/watches"
               className="hover:text-orange-500 transition-colors duration-300"
             >
               Watches
@@ -52,7 +50,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="/necklace"
+              href="/category/necklace"
               className="hover:text-orange-500 transition-colors duration-300"
             >
               Necklace
@@ -60,7 +58,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="/bracelets"
+              href="/category/bracelets"
               className="hover:text-orange-500 transition-colors duration-300"
             >
               Bracelets
@@ -68,15 +66,15 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="/jewrelly"
+              href="/category/jewrelly"
               className="hover:text-orange-500 transition-colors duration-300"
             >
               Jewrelly
             </Link>
           </li>
         </ul>
-        {/* ============search============ */}
-        <div className="hidden relative max-w-[300px] md:w-[400px] md:block">
+        {/* ------------------search for desktop view-------------------*/}
+        <div className="hidden relative w-full md:w-[400px] md:block">
           <div
             className="absolute inset-y-0 start-0 flex items-center ps-3
                 pointer-events-none"
@@ -92,7 +90,7 @@ export default function Navbar() {
                 text-sm rounded-[8px] w-full py-2 px-3 focus:outline-none bg-transparent"
           />
         </div>
-
+        {/* ----------------Shop call to action button------------------- */}
         <Link href={"/Shop"}>
           <button
             className="hidden bg-orange-400 text-white p-2 font-semibold rounded-md
@@ -102,7 +100,7 @@ export default function Navbar() {
           </button>
         </Link>
 
-        {/* Mobile Menu Button */}
+        {/* ----------------------Mobile Menu Button---------------- */}
         <button
           className="block md:block lg:hidden focus:outline-none"
           onClick={() => setOpen(true)}
@@ -128,7 +126,7 @@ export default function Navbar() {
         <ul className="flex flex-col gap-4 p-6 font-medium">
           <li>
             <Link
-              href="/rings"
+              href="/category/rings"
               onClick={() => setOpen(false)}
               className="hover:text-orange-400 duration-400"
             >
@@ -137,7 +135,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="/watches"
+              href="/category/watches"
               onClick={() => setOpen(false)}
               className="hover:text-orange-400 duration-400"
             >
@@ -146,7 +144,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="/necklace"
+              href="/category/necklace"
               onClick={() => setOpen(false)}
               className="hover:text-orange-400 duration-400"
             >
@@ -155,7 +153,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="/bracelets"
+              href="/category/bracelets"
               onClick={() => setOpen(false)}
               className="hover:text-orange-400 duration-400"
             >
@@ -164,7 +162,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="/jewrelly"
+              href="/category/jewrelly"
               onClick={() => setOpen(false)}
               className="hover:text-orange-400 duration-400"
             >
@@ -173,21 +171,22 @@ export default function Navbar() {
           </li>
         </ul>
       </div>
-      <div className="relative w-full max-w-[300px] mx-auto md:hidden">
-          <div
-            className="absolute inset-y-0 start-0 flex items-center ps-3
-                pointer-events-none mb-3">
-            {/* for search */}
-            <Search className="w-4 h-4" />
-          </div>
-          <input
-            type="text"
-            placeholder="Search Products"
-            onChange={handleChange}
-            className="h-[36px] relative pl-10 border-[1px] mb-3
-                text-sm rounded-[20px] w-full py-2 px-3 focus:outline-none bg-transparent"
-          />
+      <div className="relative max-w-[500px] mx-3 md:hidden">
+        <div
+          className="absolute inset-y-0 start-0 flex items-center ps-3
+                pointer-events-none mb-3"
+        >
+          {/* for search */}
+          <Search className="w-4 h-4" />
         </div>
+        <input
+          type="text"
+          placeholder="Search Products"
+          onChange={handleChange}
+          className="h-[36px] relative pl-10 border-[1px] mb-3
+                text-sm rounded-[20px] w-full py-2 px-3 focus:outline-none bg-transparent"
+        />
+      </div>
       {/* Overlay */}
       {open && (
         <div

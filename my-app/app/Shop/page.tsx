@@ -19,6 +19,18 @@ const ShopList = () => {
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
 
+   if (!products) {
+    return (
+      <div className="h-screen flex justify-center items-center bg-white">
+        <div className="flex space-x-2">
+          <div className="w-4 h-4 bg-orange-500 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+          <div className="w-4 h-4 bg-orange-500 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+          <div className="w-4 h-4 bg-orange-500 rounded-full animate-bounce"></div>
+        </div>
+      </div>
+    );
+  }
+
   const fetchProducts = async (currentPage: number) => {
     try {
       const response = await axios.get(`/api/fetch-products?page=${currentPage}&limit=${PRODUCTS_PER_PAGE}`);

@@ -25,7 +25,7 @@ const Hero = () => {
         </Link>
         <Link
           href={"/"}
-          className="absolute top-[-10px] left-[20px] bg-red-400 text-sm text-white animate-pulse text-center px-1 py-0 cursor-pointer md:px-5 py-1 md:top-[30px]"
+          className="absolute top-[-10px] left-[20px] bg-red-400 text-sm text-white animate-pulse text-center px-1 py-0 cursor-pointer md:px-5 py-1 md:top-0"
         >
           watches collection
         </Link>
@@ -37,7 +37,7 @@ const Hero = () => {
         </Link>
         <Link
           href={"/"}
-          className="absolute right-[200px] top-[80px] bg-green-400 text-white animate-pulse text-sm text-center px-1 py-0 cursor-pointer md:right-[280px] md:top-[120px] md:px-5 py-1"
+          className="absolute right-[200px] top-[80px] bg-green-400 text-white animate-pulse text-sm text-center px-1 py-0 cursor-pointer md:right-[280px] md:top-[100px] md:px-5 py-1"
         >
           Rings collection
         </Link>

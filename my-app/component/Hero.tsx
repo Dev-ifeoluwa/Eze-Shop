@@ -24,19 +24,20 @@ const Hero = () => {
           Explore all collection
         </Link>
         <Link
-          href={"/"}
+          href={"/category/watches"}
           className="absolute top-[-10px] left-[20px] bg-red-400 text-sm text-white animate-pulse text-center px-1 py-0 cursor-pointer md:px-5 py-1 md:top-0"
         >
           watches collection
         </Link>
-        <Link
-          href={"/https://wa.me/message/GMOSQ7JX7A75N1"}
+        <a
+          href={"https://wa.me/message/GMOSQ7JX7A75N1"}
+          target="_blank"
           className="absolute bottom-0 left-[200px] bg-black text-white animate-bounce text-center px-5 py-2  rounded cursor-pointer"
         >
           Buy Now
-        </Link>
+        </a>
         <Link
-          href={"/"}
+          href={"/category/rings"}
           className="absolute right-[200px] top-[80px] bg-green-400 text-white animate-pulse text-sm text-center px-1 py-0 cursor-pointer md:right-[280px] md:top-[100px] md:px-5 py-1"
         >
           Rings collection

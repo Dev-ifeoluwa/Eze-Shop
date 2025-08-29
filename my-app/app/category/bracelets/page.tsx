@@ -33,13 +33,15 @@ const BraceletsCategoryPage = () => {
       <h1 className="text-2xl font-bold mb-8 text-center">Bracelets Collection</h1>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {bracelets.map((bracelets) => (
-          <Link href={`/product/${bracelets._id}`} key={bracelets._id} className="flex flex-col items-center">
+          <Link href={`/product/${bracelets._id}`} 
+          key={bracelets._id} 
+          className="flex flex-col bg-white shadow-lg overflow-hidden justify-between">
             <Image
               src={bracelets.image}
               alt={bracelets.name}
               width={300}
               height={300}
-              className="rounded-lg object-cover border border-gray-200 shadow-md"
+              className="object-cover border border-gray-200 shadow-md"
                 />
             <div className="mt-2 text-center">
               <h2 className="text-[14px] text-black py-2 md:text-[16px]">{bracelets.name}</h2>

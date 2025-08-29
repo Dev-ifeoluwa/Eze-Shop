@@ -29,19 +29,25 @@ const productList = () => {
     >
       <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 relative">
         {products.map((product: product, index) => (
-          <Link href={`/product/${product._id}`} key={index}>
-            <Image
-              src={product.image}
-              alt="img"
-              width={300}
-              height={300}
-              className="object-cover object-center rounded-lg"
-            />
-            <div className="mt-4">
+          <Link
+            href={`/product/${product._id}`}
+            key={index}
+            className="flex flex-col bg-white shadow-lg overflow-hidden justify-between"
+          >
+            {/* h-90 */}
+            <div className="w-full h-70 flex items-center justify-center overflow-hidden">
+              <Image
+                src={product.image}
+                alt="img"
+                width={300}
+                height={300}
+                className="object-cover object-center w-full h-full"
+              />
+            </div>
+            <div className="flex-1 flex flex-col justify-end">
               <div className="text-center">
                 <h2 className="text-[14px] text-black py-2 md:text-[16px]">{product.name}</h2>
-                <p className="font-medium text-[14px] px-2 py-1
-                bg-gray-400 rounded text-white md:text-[16px]">₦{product.price}</p>
+                <p className="font-medium text-[14px] px-2 py-1 bg-gray-400 rounded text-white md:text-[16px]">₦{product.price}</p>
               </div>
             </div>
           </Link>

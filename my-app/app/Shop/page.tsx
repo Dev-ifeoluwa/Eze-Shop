@@ -64,13 +64,15 @@ const ShopList = () => {
     <div className="flex flex-col items-center px-4 md:px-12 py-5 md:py-10">
       <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 relative">
         {products.map((product: product) => (
-          <Link href={`/product/${product._id}`} key={product._id}>
+          <Link href={`/product/${product._id}`}
+           key={product._id}
+           className="flex flex-col bg-white shadow-lg overflow-hidden justify-between">
             <Image
               src={product.image}
               alt="img"
               width={300}
               height={300}
-              className="object-cover object-center rounded-lg"
+              className="object-cover object-center"
             />
             <div className="mt-4 text-center">
               <h2 className="text-[14px] text-black py-2 md:text-[16px]">{product.name}</h2>

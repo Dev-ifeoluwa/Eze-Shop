@@ -39,13 +39,13 @@ const RingCategoryPage = () => {
         {rings.map((ring) => (
           <Link href={`/product/${ring._id}`} 
                 key={ring._id} 
-                className="flex flex-col items-center">
+                className="flex flex-col bg-white shadow-lg overflow-hidden justify-between">
             <Image
               src={ring.image}
               alt={ring.name}
               width={300}
               height={300}
-              className="rounded-lg object-cover border border-gray-200 shadow-md"
+              className="object-cover border border-gray-200 shadow-md"
                 />
             <div className="mt-2 text-center">
               <h2 className="text-[14px] text-black py-2 md:text-[16px]">{ring.name}</h2>

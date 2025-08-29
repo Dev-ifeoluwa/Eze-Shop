@@ -38,7 +38,9 @@ const SearchComponent = () => {
     >
       <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 relative">
         {products.map((product: product, index) => (
-          <Link href={`/product/${product._id}`} key={index}>
+          <Link href={`/product/${product._id}`} 
+              key={index}
+              className="flex flex-col bg-white shadow-lg overflow-hidden justify-between">
             <Image
               src={product.image}
               alt="img"
